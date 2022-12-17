@@ -8,6 +8,7 @@ const answer = document.getElementById("answer");
 const input = document.getElementById("input");
 const submitButton = document.getElementById("submit-button");
 const nextButton = document.getElementById("next-button");
+const quickModeCheckbox = document.getElementById("quick-mode-checkbox");
 
 let currentCharacterId = undefined;
 
@@ -54,6 +55,10 @@ function onSubmit() {
     nextButton.style = "";
     nextButton.focus();
     characterElement.className = "character correct";
+    if (quickModeCheckbox.checked) {
+      findNextCharacter();
+      startPlaying();
+    }
   } else { // wrong
     playTable.className = "play-table wrong";
     updateProgress(currentCharacterId, false);
