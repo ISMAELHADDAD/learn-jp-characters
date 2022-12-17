@@ -46,7 +46,7 @@ function onSubmit() {
   const characterElement = document.getElementById(currentCharacterId);
   const answers = answer.textContent.toLowerCase().split(",");
   answer.style = "";
-  if (answers.includes(input.value)) { // correct
+  if (answers.includes(input.value.toLowerCase())) { // correct
     playTable.className = "play-table correct";
     updateProgress(currentCharacterId, true);
     input.style = "display: none;";
