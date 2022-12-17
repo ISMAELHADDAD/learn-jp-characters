@@ -1,0 +1,130 @@
+body {
+  background: #0f0f23;
+  color: #cccccc;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14pt;
+  min-width: 60em;
+}
+
+a {
+  text-decoration: none;
+  color: #009900;
+}
+a:hover,
+a:focus {
+  color: #99ff99;
+}
+h1,
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+header {
+  white-space: nowrap;
+  cursor: default;
+  z-index: 100;
+  margin-bottom: 2em;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+  padding-right: 1em;
+}
+header h1 button.link,
+header h1 span {
+  display: inline-block;
+  text-decoration: none;
+  color: #00cc00;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+}
+header h1 button.link:hover,
+header h1 button.link:focus {
+  color: #99ff99;
+  text-shadow: 0 0 2px #99ff99, 0 0 5px #99ff99;
+}
+header h1.title-event .title-event-wrap {
+  opacity: 0.33;
+  white-space: pre;
+}
+header nav {
+  display: inline-block;
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+header nav li {
+  display: inline-block;
+  padding: 0 0.6em;
+}
+header nav a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+button.link {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14pt;
+  color: #009900;
+  cursor: pointer;
+}
+button.link:hover,
+button.link:focus {
+  color: #99ff99;
+}
+
+input[type="text"],
+textarea {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #666666;
+  background: #10101a;
+  padding: 0 2px;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+.character {
+  padding: 0 0.5rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.character.correct {
+  background-color: #295b29;
+}
+
+.character:hover {
+  color: #0f0f23;
+  background-color: #99ff99;
+}
+
+.play-table {
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.play-table.correct {
+  background-color: #295b29;
+}
+
+.play-table.wrong {
+  background-color: #f53232;
+}
+
+.play-character {
+  font-size: 5rem;
+  padding-right: 1rem;
+}
+
+.star-count {
+  color: #ffff66;
+}

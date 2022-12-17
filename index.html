@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Learn</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="text/javascript" src="./progress.js" defer></script>
+    <script type="text/javascript" src="./interaction.js" defer></script>
+    <script type="text/javascript" src="./load_content.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="title-global">
+          <button id="main-page-button" class="link">Overview</button>
+        </h1>
+        <nav>
+          <ul>
+            <li><button id="play-button" class="link">[Play]</button></li>
+          </ul>
+          <ul>
+            <li id="star-count" class="star-count">0 of 2575*</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="overview-section"></section>
+      <section id="play-section" style="display: none;">
+        <div>
+          <table id="play-table" class="play-table">
+            <tbody>
+              <tr>
+                <td id="play-character" rowspan="2" class="play-character">あ</td>
+                <td id="answer" >Meaning</td>
+              </tr>
+              <tr>
+                <td>
+                  <input id="input" type="text"/>
+                  <button id="submit-button" class="link">[Submit]</button>
+                  <button id="next-button" class="link" style="display: none;">[Next]</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
