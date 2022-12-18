@@ -8,10 +8,10 @@ async function load(title, path, characterFn, idFn) {
     const charContainer = document.createElement("div");
     charContainer.style = "max-width: 680px; display: flex; flex-wrap: wrap;"
     overviewSection.appendChild(charContainer);
-    content.forEach(c => {
+    content.forEach((c, i) => {
       const node = document.createElement("div");
       node.textContent = characterFn(c);
-      node.id = idFn(c);
+      node.id = idFn(c, i);
       node.className = "character not-answered";
       if (progress.includes(node.id)) {
         node.className = "character correct";
@@ -33,8 +33,8 @@ async function load(title, path, characterFn, idFn) {
 
 async function init() {
   try {
-    await load("Hiragana", "./data/hiragana.json", (c) => c.kana, (c) => `hiragana-${c.roumaji}`);
-    await load("Katakana", "./data/katakana.json", (c) => c.kana, (c) => `katakana-${c.roumaji}`);
+    await load("Hiragana", "./data/hiragana.json", (c) => c.kana, (_c, i) => `hiragana-${i}`);
+    await load("Katakana", "./data/katakana.json", (c) => c.kana, (_c, i) => `katakana-${i}`);
     await load("Radicals 1", "./data/radicals_1.json", (c) => c.radical, (c) => `radical-${c.id}`);
     await load("Radicals 2", "./data/radicals_2.json", (c) => c.radical, (c) => `radical-${c.id}`);
     await load("Kanji 1", "./data/kanji_level_1.json", (c) => c.kanji, (c) => `kanji-${c.id}`);
